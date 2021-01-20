@@ -1,0 +1,79 @@
+{
+  "name": "ripemd160-js",
+  "version": "1.0.0",
+  "description": "An universal JavaScript ripemd160 message digest function.",
+  "main": "public/index.js",
+  "scripts": {
+    "prepare": "npm run prepare:jsdoc && npm run prepare:prettier",
+    "prepare:jsdoc": "jsdoc-md",
+    "prepare:prettier": "prettier --write readme.md && prettier --write changelog.md",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:api",
+    "test:api": "coverage-node -r hard-rejection/register test/index.test.mjs",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier -c .",
+    "prepublishOnly": "npm test",
+    "dev": "next",
+    "wasm2json": "node parse_wasm.js"
+  },
+  "engines": {
+    "node": "> 10"
+  },
+  "exports": {
+    ".": {
+      "import": "./public/index.mjs",
+      "require": "./public/index.js"
+    },
+    "./public/": "./public/",
+    "./package": "./package.json",
+    "./package.json": "./package.json"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pur3miish/ripemd160-js.git"
+  },
+  "keywords": [
+    "ripemd160",
+    "web",
+    "assembly",
+    "wasm",
+    "javascript",
+    "blockchain",
+    "asymmetric",
+    "key",
+    "utility",
+    "constant",
+    "time"
+  ],
+  "author": "pur3miish",
+  "license": "MIT",
+  "files": [
+    "public",
+    "private"
+  ],
+  "bugs": {
+    "url": "https://github.com/pur3miish/ripemd160-js/issues"
+  },
+  "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
+  "devDependencies": {
+    "coverage-node": "^4.0.0",
+    "eslint": "^7.16.0",
+    "eslint-config-env": "^16.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^31.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "hard-rejection": "^2.1.0",
+    "jsdoc-md": "^8.0.0",
+    "next": "^10.0.5",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "test-director": "^5.0.0"
+  }
+}
