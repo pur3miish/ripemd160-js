@@ -6,6 +6,12 @@ A [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript) RI
 
 Adapted from [trezor ripemd160](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c)
 
+# Setup
+
+```shell
+$ npm i ripemd160-js
+```
+
 # Support
 
 - [Node.js](https://nodejs.org/en/) `>= 8`
