@@ -1,4 +1,4 @@
-import { deepStrictEqual, ok, throws } from 'assert'
+import { deepStrictEqual, ok } from 'assert'
 import crypto from 'crypto'
 import { TestDirector } from 'test-director'
 import ripemd160 from '../public/index.js'
