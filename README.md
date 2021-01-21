@@ -4,7 +4,7 @@
 
 A [RIPEMD160](https://en.bitcoin.it/wiki/RIPEMD-160) cryptographic hash function for [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript).
 
-This package has adapted [Trezor’s](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) RIPEMD160 and compiled it to a stand alone web assembly file that can be readily consumed by JavaScript.
+This package has adapted [Trezor’s](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) RIPEMD160 and compiled it to a stand-alone web assembly file that can be readily consumed by JavaScript.
 
 Please see my [wasm-ripemd160](https://github.com/pur3miish/ripemd160-wasm) code repo on how to achieve this.
 
