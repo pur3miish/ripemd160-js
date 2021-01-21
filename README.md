@@ -2,11 +2,13 @@
 
 # ripemd160-js
 
-A RIPEMD160 cryptographic hash function for [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript).
+A [RIPEMD160](https://en.bitcoin.it/wiki/RIPEMD-160) cryptographic hash function for [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript).
 
-This package has adapted the [Trezor](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) C code and compiled it to Web assembly.
+This package has adapted [Trezor’s](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) RIPEMD160 and compiled it to a stand alone web assembly file that can be readily consumed by JavaScript.
 
-_NB - this ripemd160 hash function has a 59 max character limit_
+Please see my [wasm-ripemd160](https://github.com/pur3miish/ripemd160-wasm) code repo on how to acheive this.
+
+_NB - this RIPEMD160 hash function has a 59 max character limit._
 
 # Setup
 
@@ -20,8 +22,6 @@ Ensure your JavaScript environment can support [Web Assembly](https://caniuse.co
 
 - [Node.js](https://nodejs.org/en/) `>= 8`
 - [Browser list](https://github.com/browserslist/browserslist) `defaults` `not IE 11`
-
-You will need node 10 for test assertions.
 
 # API
 
