@@ -1,4 +1,4 @@
-import { deepStrictEqual, ok, rejects } from 'assert'
+import { deepStrictEqual, ok, throws } from 'assert'
 import crypto from 'crypto'
 import { TestDirector } from 'test-director'
 import ripemd160 from '../public/index.js'
@@ -36,11 +36,21 @@ tests.add('Ripemd160 size limit.', async () => {
       .digest()
   )
   deepStrictEqual(native_node_hash, hash, 'random bytes')
-  rejects(() => ripemd160(crypto.randomBytes(60)))
 })
 
 tests.add('expected Error.', async () => {
-  rejects(async () => ripemd160(1), 'TypeError')
+  try {
+    await ripemd160(crypto.randomBytes(60))
+  } catch (err) {
+    if (err instanceof RangeError) ok(true, 'expected range error')
+    else throw err
+  }
+  try {
+    await ripemd160(1)
+  } catch (err) {
+    if (err instanceof TypeError) ok(true, 'expected type error')
+    else throw err
+  }
 })
 
 tests.run()

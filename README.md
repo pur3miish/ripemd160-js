@@ -22,6 +22,8 @@ Ensure your JavaScript environment can support [Web Assembly](https://caniuse.co
 - [Node.js](https://nodejs.org/en/) `>= 8`
 - [Browser list](https://github.com/browserslist/browserslist) `defaults` `not IE 11`.
 
+You will need node 10 for test assertions.
+
 # API
 
 ## Table of contents
