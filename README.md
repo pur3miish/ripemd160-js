@@ -6,8 +6,7 @@ A RIPEMD160 cryptographic hash function for [Universal JavaScript](https://en.wi
 
 This package has adapted the [Trezor](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) C code and compiled it to Web assembly.
 
-
-*NB - this ripemd160 hash function has a 59 max character limit*
+_NB - this ripemd160 hash function has a 59 max character limit_
 
 # Setup
 
