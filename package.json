@@ -1,6 +1,6 @@
 {
-  "name": "ripemd160-js-rc",
-  "version": "1.0.0",
+  "name": "ripemd160-js",
+  "version": "1.0.0-rc",
   "description": "An universal JavaScript ripemd160 message digest function.",
   "main": "public/index.js",
   "scripts": {
