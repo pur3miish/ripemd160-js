@@ -1,5 +1,11 @@
 # ripemd160-js changelog
 
+# 1.1.1
+
+## Patch
+
+- readme.md updates.
+
 # 1.1.0
 
 ### Minor
