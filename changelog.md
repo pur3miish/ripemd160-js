@@ -1,6 +1,6 @@
 # ripemd160-js changelog
 
-# Next
+# 1.0.2
 
 ### Patch
 
