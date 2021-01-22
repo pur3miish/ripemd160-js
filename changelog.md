@@ -11,6 +11,7 @@
 ## 1.0.1
 
 ### Patch
+
 - typo fix in readme.md.
 
 ## 1.0.0

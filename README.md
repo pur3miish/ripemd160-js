@@ -2,13 +2,13 @@
 
 # ripemd160-js
 
+[![NPM Package](https://img.shields.io/npm/v/ripemd160-js.svg)](https://www.npmjs.org/package/ripemd160-js) [![CI status](https://github.com/pur3miish/ripemd160-js/workflows/CI/badge.svg)](https://github.com/pur3miish/ripemd160-js/actions)
+
 A [RIPEMD160](https://en.bitcoin.it/wiki/RIPEMD-160) cryptographic hash function for [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript).
 
-This package has adapted [Trezor’s](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) RIPEMD160 and compiled it to a stand-alone web assembly file that can be readily consumed by JavaScript.
+This package has adapted [Trezor’s](https://github.com/trezor/trezor-crypto/blob/master/ripemd160.c) RIPEMD160 and compiled it to a stand-alone [WebAssembly](https://caniuse.com/?search=web%20assembly) file that can be readily consumed by browsers and Node.js.
 
 Please see my [wasm-ripemd160](https://github.com/pur3miish/ripemd160-wasm) code repo on how to achieve this.
-
-_NB - this RIPEMD160 hash function has a 59 max character limit._
 
 # Setup
 
@@ -17,8 +17,6 @@ $ npm i ripemd160-js
 ```
 
 # Support
-
-Ensure your JavaScript environment can support [Web Assembly](https://caniuse.com/?search=web%20assembly).
 
 - [Node.js](https://nodejs.org/en/) `>= 8`
 - [Browser list](https://github.com/browserslist/browserslist) `defaults` `not IE 11`
