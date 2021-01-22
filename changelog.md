@@ -4,9 +4,8 @@
 
 ### Patch
 
-- Added github workflow configuration.
+- Added github workflow configuration and badge to readme.md..
 - Added npm version badge to readme.md.
-- Changes to readme
 
 ## 1.0.1
 
