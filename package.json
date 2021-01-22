@@ -15,7 +15,7 @@
     "wasm2json": "node parse_wasm.js"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 12"
   },
   "exports": {
     ".": {
@@ -28,7 +28,8 @@
   },
   "browserslist": [
     "defaults",
-    "not IE 11"
+    "not IE 11",
+    "maintained node versions"
   ],
   "repository": {
     "type": "git",

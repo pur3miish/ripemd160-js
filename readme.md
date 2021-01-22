@@ -18,7 +18,7 @@ $ npm i ripemd160-js
 
 # Support
 
-- [Node.js](https://nodejs.org/en/) `>= 8`
+- [Node.js](https://nodejs.org/en/) `>= 12`
 - [Browser list](https://github.com/browserslist/browserslist) `defaults` `not IE 11`
 
 # API
