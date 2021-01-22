@@ -2,7 +2,7 @@
 
 # ripemd160-js
 
-[![NPM Package](https://img.shields.io/npm/v/ripemd160-js.svg)](https://www.npmjs.org/package/ripemd160-js) [![CI status](https://github.com/pur3miish/ripemd160-js/workflows/CI/badge.svg)](https://github.com/pur3miish/ripemd160-js/actions)
+[![NPM Package](https://img.shields.io/npm/v/ripemd160-js.svg)](https://www.npmjs.org/package/ripemd160-js) [![CI status](https://github.com/pur3miish/ripemd160-js/workflows/CI/badge.svg)](https://github.com/pur3miish/ripemd160-js/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pur3miish/ripemd160-js/blob/main/LICENSE)
 
 A [RIPEMD160](https://en.bitcoin.it/wiki/RIPEMD-160) cryptographic hash function for [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript).
 

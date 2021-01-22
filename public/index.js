@@ -30,8 +30,8 @@ const { WASM } = require('../private/ripemd160.json')
  * The logged output will be “79f901da2609f020adadbf2e5f68a16c8c3f7d57”
  */
 async function ripemd160(message) {
-  if (message.length > 59)
-    throw new RangeError('Message must be less than 60 characters.')
+  if (message.length > 65536)
+    throw new RangeError('Message must be less than 65,536 characters.')
 
   const type = typeof message
 

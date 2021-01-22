@@ -1,6 +1,10 @@
 # ripemd160-js changelog
 
-# 1.0.2
+# 1.1.0
+
+### Minor
+
+- Hash function can now handle arrays & strings of up to 65,536.
 
 ### Patch
 

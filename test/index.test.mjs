@@ -40,7 +40,7 @@ tests.add('Ripemd160 size limit.', async () => {
 
 tests.add('expected Error.', async () => {
   try {
-    await ripemd160(crypto.randomBytes(60))
+    await ripemd160(crypto.randomBytes(2 ** 17))
   } catch (err) {
     if (err instanceof RangeError) ok(true, 'expected range error')
     else throw err
@@ -53,4 +53,20 @@ tests.add('expected Error.', async () => {
   }
 })
 
+tests.add('message length > 65536,', async () => {
+  const random_bytes = new Uint8Array(crypto.randomBytes(2 ** 16))
+  const random_bytes_b = new Uint8Array(crypto.randomBytes(2 ** 8))
+  const random_bytes_c = new Uint8Array(crypto.randomBytes(2 ** 2))
+
+  const compare = async bytes => {
+    const native_hash = new Uint8Array(
+      crypto.createHash('ripemd160').update(bytes).digest()
+    )
+    const hash = await ripemd160(bytes)
+    deepStrictEqual(hash, native_hash)
+  }
+  compare(random_bytes)
+  compare(random_bytes_b)
+  compare(random_bytes_c)
+})
 tests.run()
