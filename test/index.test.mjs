@@ -1,4 +1,4 @@
-import { deepStrictEqual, ok } from 'assert'
+import assert from 'assert'
 import crypto from 'crypto'
 import { TestDirector } from 'test-director'
 import ripemd160 from '../public/index.js'
@@ -12,7 +12,7 @@ tests.add('Ripemd160 message input.', async () => {
     .update('the quick brown fox jumps over the lazy dog')
     .digest()
     .toString('hex')
-  ok(native_hash == hash, 'Expected string output')
+  assert.ok(native_hash == hash, 'Expected string output')
 })
 
 tests.add('Ripemd160 message Uint8Array.', async () => {
@@ -23,7 +23,7 @@ tests.add('Ripemd160 message Uint8Array.', async () => {
       .update(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
       .digest()
   )
-  deepStrictEqual(native_hash, hash, 'Expected Uint8Array output')
+  assert.deepStrictEqual(native_hash, hash, 'Expected Uint8Array output')
 })
 
 tests.add('Ripemd160 size limit.', async () => {
@@ -35,20 +35,20 @@ tests.add('Ripemd160 size limit.', async () => {
       .update(new Uint8Array(random_buffer))
       .digest()
   )
-  deepStrictEqual(native_node_hash, hash, 'random bytes')
+  assert.deepStrictEqual(native_node_hash, hash, 'random bytes')
 })
 
 tests.add('expected Error.', async () => {
   try {
     await ripemd160(crypto.randomBytes(60))
   } catch (err) {
-    if (err instanceof RangeError) ok(true, 'expected range error')
+    if (err instanceof RangeError) assert.ok(true, 'expected range error')
     else throw err
   }
   try {
     await ripemd160(1)
   } catch (err) {
-    if (err instanceof TypeError) ok(true, 'expected type error')
+    if (err instanceof TypeError) assert.ok(true, 'expected type error')
     else throw err
   }
 })
