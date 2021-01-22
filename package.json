@@ -12,7 +12,6 @@
     "test:eslint": "eslint .",
     "test:prettier": "prettier -c .",
     "prepublishOnly": "npm test",
-    "dev": "next",
     "wasm2json": "node parse_wasm.js"
   },
   "engines": {
