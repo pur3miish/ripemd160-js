@@ -36,7 +36,7 @@ async function ripemd160(message) {
   const type = typeof message
 
   if (typeof message == 'string')
-    message = new Uint8Array(message.match(/.{1}/gm).map(i => i.charCodeAt(0)))
+    message = new Uint8Array(message.match(/.{1}/gmu).map(i => i.charCodeAt(0)))
 
   const {
     instance: {

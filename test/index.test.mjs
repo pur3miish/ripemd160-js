@@ -1,6 +1,6 @@
 import { deepStrictEqual, ok } from 'assert'
 import crypto from 'crypto'
-import { TestDirector } from 'test-director'
+import TestDirector from 'test-director'
 import ripemd160 from '../public/index.js'
 
 const tests = new TestDirector()
@@ -69,4 +69,5 @@ tests.add('message length > 65536,', async () => {
   compare(random_bytes_b)
   compare(random_bytes_c)
 })
+
 tests.run()

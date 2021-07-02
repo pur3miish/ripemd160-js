@@ -1,8 +1,11 @@
 # ripemd160-js changelog
+
 # Next
 
 ## Patch
--  removed dev dependencies.
+
+- Depen updated.
+- Removed dev dependencies.
 
 # 1.1.1
 

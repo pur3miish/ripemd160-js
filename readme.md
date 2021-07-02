@@ -21,10 +21,6 @@ $ npm i ripemd160-js
 
 # API
 
-## Table of contents
-
-- [function ripemd160](#function-ripemd160)
-
 ## function ripemd160
 
 Performs the message digest algorithm RIPEMD160 on input data.
