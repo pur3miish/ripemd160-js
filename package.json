@@ -20,7 +20,7 @@
   },
   "exports": {
     ".": {
-      "import": "./public/index.mjs",
+      "import": "./public/index.js",
       "require": "./public/index.js"
     },
     "./public/": "./public/",
@@ -61,7 +61,6 @@
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
   "devDependencies": {
     "coverage-node": "^5.0.1",
-    "eosjs-ecc": "^4.0.7",
     "eslint": "^7.22.0",
     "eslint-config-env": "^21.0.0",
     "eslint-config-prettier": "^8.1.0",

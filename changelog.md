@@ -4,6 +4,7 @@
 
 ## Patch
 
+- Imports now working
 - Depen updated.
 - Removed dev dependencies.
 
