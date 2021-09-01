@@ -1,10 +1,13 @@
 # ripemd160-js changelog
 
-# Next
+# 1.2.0
+
+## Minor
+
+- Imports are now working.
 
 ## Patch
 
-- Imports now working
 - Depen updated.
 - Removed dev dependencies.
 
