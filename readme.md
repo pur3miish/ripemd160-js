@@ -25,7 +25,7 @@ npm install ripemd160-js
 For [Deno](https://deno.land/)
 
 ```js
-import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js";
+import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js/mod.mjs";
 ```
 
 ## Examples

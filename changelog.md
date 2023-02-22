@@ -1,5 +1,11 @@
 # ripemd160-js changelog
 
+# 2.0.1
+
+## Patch
+
+- Added export path .mod.mjs for deno.
+
 # 2.0.0
 
 ## Major
