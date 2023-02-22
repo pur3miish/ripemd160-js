@@ -1,5 +1,16 @@
 # ripemd160-js changelog
 
+# 2.0.0
+
+## Major
+
+- This package is now an ESM module
+- Support for Deno
+
+## Patch
+
+- dev eslint packages changes
+
 # 1.2.0
 
 ## Minor
