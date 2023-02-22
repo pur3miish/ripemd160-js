@@ -30,7 +30,7 @@ npm install ripemd160-js
 For [Deno](https://deno.land/)
 
 ```js
-import ripemd160 from "https://deno.land/x/ripemd160js/ripemd160.mjs";
+import ripemd160 from "https://deno.land/x/ripemd160js@v2.0.2/ripemd160.mjs";
 ```
 
 ## Examples
