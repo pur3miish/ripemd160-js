@@ -65,4 +65,4 @@ ripemd160(Uint8Array.from([1, 2, 3])).then(console.log);
 [`ripemd160`](https://npm.im/ripemd160-js) exports two files.
 
 - [ripemd160.json](ripemd160.json)
-- [index.mjs](index.mjs)
+- [ripemd160.mjs](index.mjs)
