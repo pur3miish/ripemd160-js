@@ -6,6 +6,11 @@
 
 A [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript) [RIPEMD160](https://en.bitcoin.it/wiki/RIPEMD-160) cryptographic hash function.
 
+**Features**
+
+- Zero dependency
+- ~7 KB
+
 ## Requirements
 
 Supported runtime environments:
@@ -25,7 +30,7 @@ npm install ripemd160-js
 For [Deno](https://deno.land/)
 
 ```js
-import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js/ripemd160.mjs";
+import ripemd160 from "https://deno.land/x/ripemd160js/ripemd160.mjs";
 ```
 
 ## Examples

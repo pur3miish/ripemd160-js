@@ -1,5 +1,11 @@
 # ripemd160-js changelog
 
+# 2.0.2
+
+## Patch
+
+- Removed JSON file for better support for universal cross platform (deno, nodejs and browser support).
+
 # 2.0.1
 
 ## Patch
