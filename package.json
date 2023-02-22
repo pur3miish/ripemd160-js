@@ -10,7 +10,7 @@
     "prettier": "prettier -c .",
     "prettier:readme": "prettier --write readme.md",
     "types": "tsc -p jsconfig.json",
-    "tests": "coverage-node index.test.mjs",
+    "tests": "coverage-node ripemd160.test.mjs",
     "test": "npm run eslint && npm run prettier && npm run types && npm run tests",
     "prepublishOnly": "npm test"
   },
@@ -42,15 +42,14 @@
   "author": "pur3miish",
   "license": "MIT",
   "files": [
-    "index.mjs",
+    "ripemd160.mjs",
     "ripemd160.json"
   ],
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
     "./ripemd160.json": "./ripemd160.json",
-    ".": "./index.mjs",
-    "./mod.mjs": "./index.mjs"
+    "./ripemd160.mjs": "./ripemd160.mjs"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

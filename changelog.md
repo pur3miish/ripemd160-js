@@ -4,7 +4,7 @@
 
 ## Patch
 
-- Added export path .mod.mjs for deno.
+- Bug fix for import structure.
 
 # 2.0.0
 

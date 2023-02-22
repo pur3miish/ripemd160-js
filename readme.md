@@ -25,7 +25,7 @@ npm install ripemd160-js
 For [Deno](https://deno.land/)
 
 ```js
-import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js/mod.mjs";
+import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js/ripemd160.mjs";
 ```
 
 ## Examples
@@ -33,14 +33,14 @@ import ripemd160 from "https://api.deno.land/webhook/gh/ripemd160js/mod.mjs";
 Import For ESM
 
 ```js
-import ripemd160 from "ripemd160-js";
+import ripemd160 from "ripemd160-js/ripemd160.mjs";
 ```
 
 Import For CJS
 
 ```js
 (async function () {
-  const { default: ripemd160 } = await import("ripemd160-js");
+  const { default: ripemd160 } = await import("ripemd160-js/ripemd160.mjs");
 })();
 ```
 

@@ -2,7 +2,7 @@ import { deepStrictEqual, ok } from "assert";
 import crypto from "crypto";
 import TestDirector from "test-director";
 
-import ripemd160 from "./index.mjs";
+import ripemd160 from "./ripemd160.mjs";
 
 const tests = new TestDirector();
 
