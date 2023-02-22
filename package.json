@@ -42,7 +42,8 @@
   "author": "pur3miish",
   "license": "MIT",
   "files": [
-    "ripemd160.mjs"
+    "ripemd160.mjs",
+    "wasm.mjs"
   ],
   "sideEffects": false,
   "exports": {
