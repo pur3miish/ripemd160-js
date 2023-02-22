@@ -1,6 +1,6 @@
 {
   "name": "ripemd160-js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An universal JavaScript ripemd160 message digest function.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
