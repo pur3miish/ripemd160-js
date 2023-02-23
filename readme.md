@@ -33,6 +33,16 @@ For [Deno](https://deno.land/)
 import ripemd160 from "https://deno.land/x/ripemd160js@v2.0.3/ripemd160.mjs";
 ```
 
+Include in your `deno.json`:
+
+```json
+{
+  "imports": {
+    "ripemd160-js/": "https://deno.land/x/ripemd160js@v2.0.3/"
+  }
+}
+```
+
 ## Examples
 
 Import For ESM
