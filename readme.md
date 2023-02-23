@@ -9,7 +9,7 @@ A [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript) [R
 **Features**
 
 - Zero dependency
-- ~7 KB
+- <7 KB gzip
 
 ## Requirements
 
@@ -63,11 +63,4 @@ ripemd160("hello").then(console.log);
 ripemd160(Uint8Array.from([1, 2, 3])).then(console.log);
 ```
 
-> The logged output will be “79f901da2609f020adadbf2e5f68a16c8c3f7d57” -->
-
-## Exports
-
-[`ripemd160`](https://npm.im/ripemd160-js) exports two files.
-
-- [ripemd160.json](ripemd160.json)
-- [ripemd160.mjs](index.mjs)
+> The logged output will be “79f901da2609f020adadbf2e5f68a16c8c3f7d57”
