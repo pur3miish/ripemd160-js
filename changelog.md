@@ -1,5 +1,11 @@
 # ripemd160-js changelog
 
+# 2.0.3
+
+## Patch
+
+- Redme updates
+
 # 2.0.2
 
 ## Patch
