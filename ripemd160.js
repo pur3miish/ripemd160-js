@@ -1,5 +1,5 @@
 // @ts-check
-import WASM from "./wasm.mjs";
+import WASM from "./wasm.js";
 
 /**
  * Performs the message digest algorithm RIPEMD160 on input data.

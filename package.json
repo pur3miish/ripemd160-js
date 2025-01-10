@@ -1,21 +1,22 @@
 {
   "name": "ripemd160-js",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "An universal JavaScript ripemd160 message digest function.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
-  "main": "ripemd160.mjs",
+  "main": "ripemd160.js",
   "scripts": {
     "eslint": "eslint .",
     "prettier": "prettier -c .",
     "prettier:readme": "prettier --write readme.md",
     "types": "tsc -p jsconfig.json",
-    "tests": "coverage-node ripemd160.test.mjs",
+    "tests": "coverage-node ripemd160.test.js",
     "test": "npm run eslint && npm run prettier && npm run types && npm run tests",
     "prepublishOnly": "npm test"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 16",
+    "npm": ">=7.0.0"
   },
   "browserslist": [
     "defaults",
@@ -42,13 +43,13 @@
   "author": "pur3miish",
   "license": "MIT",
   "files": [
-    "ripemd160.mjs",
-    "wasm.mjs"
+    "ripemd160.js",
+    "wasm.js"
   ],
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
-    "./ripemd160.mjs": "./ripemd160.mjs"
+    ".": "./ripemd160.js"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
