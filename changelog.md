@@ -4,6 +4,7 @@
 
 ## Patch
 
+- added .ts declaration file.
 - Fixed exports issue.
 
 ## Patch
