@@ -4,8 +4,7 @@
     "module": "nodenext",
     "noEmit": true,
     "strict": true,
-    "strictNullChecks": false,
-    "resolveJsonModule": true
+    "strictNullChecks": false
   },
   "typeAcquisition": {
     "enable": false

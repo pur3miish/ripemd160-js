@@ -1,26 +1,14 @@
 {
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended", "plugin:mocha/recommended"],
+  "rules": { "mocha/no-global-tests": "off" },
   "env": {
     "es2022": true,
     "node": true,
-    "browser": true
+    "browser": true,
+    "mocha": true
   },
   "parserOptions": {
-    "ecmaVersion": "latest"
-  },
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "parserOptions": {
-        "sourceType": "module"
-      },
-      "globals": {
-        "__dirname": "off",
-        "__filename": "off",
-        "exports": "off",
-        "module": "off",
-        "require": "off"
-      }
-    }
-  ]
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  }
 }

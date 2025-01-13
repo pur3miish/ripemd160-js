@@ -16,7 +16,6 @@ A [Universal JavaScript](https://en.wikipedia.org/wiki/Isomorphic_JavaScript) [R
 Supported runtime environments:
 
 - [Node.js](https://nodejs.org) versions `>=16.0.0`
-- [Deno](https://deno.land/) version `>=1.30`
 - Browsers matching the [Browserslist](https://browsersl.ist) query [`> 0.5%, not OperaMini all, not dead`](https://browsersl.ist/?q=%3E+0.5%25%2C+not+OperaMini+all%2C+not+dead).
 
 ## Installation
@@ -27,22 +26,6 @@ For [Node.js](https://nodejs.org), to install [`ripemd160-js`](https://npm.im/ri
 npm install ripemd160-js
 ```
 
-For [Deno](https://deno.land/)
-
-```js
-import ripemd160 from "https://deno.land/x/ripemd160js@v2.0.3/ripemd160.js";
-```
-
-Include in your `deno.json`:
-
-```json
-{
-  "imports": {
-    "ripemd160-js/": "https://deno.land/x/ripemd160js@v2.0.3/"
-  }
-}
-```
-
 ## Examples
 
 Import For ESM
@@ -50,22 +33,6 @@ Import For ESM
 ```js
 import ripemd160 from "ripemd160-js/ripemd160.js";
 ```
-
-Import For CJS
-
-```js
-(async function () {
-  const { default: ripemd160 } = await import("ripemd160-js/ripemd160.js");
-})();
-```
-
-**Digest text**
-
-```js
-ripemd160("hello").then(console.log);
-```
-
-> The logged output will be “108f07b8382412612c048d07d13f814118445acd”.
 
 **Digest Array**
 

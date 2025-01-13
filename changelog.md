@@ -1,6 +1,24 @@
 # ripemd160-js changelog
 
+# 3.0.3
+
+## Patch
+
+- Fixed exports issue.
+
+## Patch
+
+- Mocha testing
+
+# 3.0.1
+
+## Patch
+
+- Added fix to the missing index.d.ts file from exports.
+
 # 3.0.0
+
+## Major
 
 - TypeScript declaration files (.d.ts) have been added for all public modules.
 - Support for node >=14.0.0 & npm >=7.0.0.

@@ -1,17 +1,17 @@
 {
   "name": "ripemd160-js",
-  "version": "3.0.0",
+  "version": "3.0.3",
   "description": "An universal JavaScript ripemd160 message digest function.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
-  "main": "ripemd160.js",
+  "type": "module",
   "scripts": {
     "eslint": "eslint .",
     "prettier": "prettier -c .",
     "prettier:readme": "prettier --write readme.md",
     "types": "tsc -p jsconfig.json",
-    "tests": "coverage-node ripemd160.test.js",
-    "test": "npm run eslint && npm run prettier && npm run types && npm run tests",
+    "mocha": "mocha",
+    "test": "npm run eslint && npm run prettier && npm run types && npm run mocha",
     "prepublishOnly": "npm test"
   },
   "engines": {
@@ -42,21 +42,18 @@
   ],
   "author": "pur3miish",
   "license": "MIT",
-  "files": [
-    "ripemd160.js",
-    "wasm.js"
-  ],
+  "files": ["ripemd160.js"],
   "sideEffects": false,
   "exports": {
-    "./package.json": "./package.json",
-    ".": "./ripemd160.js"
+    "./ripemd160.js": "./ripemd160.js",
+    "./package.json": "./package.json"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
-    "coverage-node": "^8.0.0",
     "eslint": "^8.34.0",
+    "eslint-plugin-mocha": "^10.5.0",
     "prettier": "^2.8.4",
-    "test-director": "^10.0.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "mocha": "^11.0.1"
   }
 }

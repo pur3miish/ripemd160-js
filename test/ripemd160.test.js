@@ -1,12 +1,9 @@
 import { deepStrictEqual, ok } from "assert";
 import crypto from "crypto";
-import TestDirector from "test-director";
 
-import ripemd160 from "./ripemd160.js";
+import ripemd160 from "../ripemd160.js";
 
-const tests = new TestDirector();
-
-tests.add("Ripemd160 message input.", async () => {
+it("Ripemd160 message input.", async function () {
   const hash = await ripemd160("the quick brown fox jumps over the lazy dog");
   const native_hash = crypto
     .createHash("ripemd160")
@@ -16,7 +13,7 @@ tests.add("Ripemd160 message input.", async () => {
   ok(native_hash == hash, "Expected string output");
 });
 
-tests.add("Ripemd160 message Uint8Array.", async () => {
+it("Ripemd160 message Uint8Array.", async function () {
   const hash = await ripemd160(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
   const native_hash = new Uint8Array(
     crypto
@@ -27,7 +24,7 @@ tests.add("Ripemd160 message Uint8Array.", async () => {
   deepStrictEqual(native_hash, hash, "Expected Uint8Array output");
 });
 
-tests.add("Ripemd160 size limit.", async () => {
+it("Ripemd160 size limit.", async function () {
   const random_buffer = crypto.randomBytes(59);
   const hash = await ripemd160(new Uint8Array(random_buffer));
   const native_node_hash = new Uint8Array(
@@ -39,7 +36,7 @@ tests.add("Ripemd160 size limit.", async () => {
   deepStrictEqual(native_node_hash, hash, "random bytes");
 });
 
-tests.add("expected Error.", async () => {
+it("expected Error.", async function () {
   try {
     await ripemd160(crypto.randomBytes(2 ** 17));
   } catch (err) {
@@ -54,7 +51,7 @@ tests.add("expected Error.", async () => {
   }
 });
 
-tests.add("message length > 65536,", async () => {
+it("message length > 65536,", async function () {
   const random_bytes = new Uint8Array(crypto.randomBytes(2 ** 16));
   const random_bytes_b = new Uint8Array(crypto.randomBytes(2 ** 8));
   const random_bytes_c = new Uint8Array(crypto.randomBytes(2 ** 2));
@@ -70,5 +67,3 @@ tests.add("message length > 65536,", async () => {
   compare(random_bytes_b);
   compare(random_bytes_c);
 });
-
-tests.run();
