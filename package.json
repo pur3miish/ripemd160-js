@@ -1,6 +1,6 @@
 {
   "name": "ripemd160-js",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "An universal JavaScript ripemd160 message digest function.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
@@ -42,7 +42,7 @@
   ],
   "author": "pur3miish",
   "license": "MIT",
-  "files": ["ripemd160.js"],
+  "files": ["ripemd160.js", "ripemd160.d.ts"],
   "sideEffects": false,
   "exports": {
     "./ripemd160.js": "./ripemd160.js",
