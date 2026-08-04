@@ -1,7 +1,7 @@
 import { deepStrictEqual, ok } from "assert";
 import crypto from "crypto";
 
-import ripemd160 from "../ripemd160.js";
+import ripemd160 from "../index.js";
 
 it("Ripemd160 message input.", async function () {
   const hash = await ripemd160("the quick brown fox jumps over the lazy dog");
