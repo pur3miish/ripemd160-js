@@ -1,9 +1,11 @@
+function isUint8Array(value) {
+    return (ArrayBuffer.isView(value) &&
+        Object.prototype.toString.call(value) === "[object Uint8Array]");
+}
 export function ripemd160(input) {
-    if (!(input instanceof Uint8Array)) {
+    if (!isUint8Array(input)) {
         throw new TypeError("ripemd160 input must be a Uint8Array");
     }
-    if (input.length > 65536)
-        throw new RangeError("Message must be less than 65,536 characters.");
     const zl = [
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7, 4, 13, 1, 10, 6,
         15, 3, 12, 0, 9, 5, 2, 14, 11, 8, 3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13,
