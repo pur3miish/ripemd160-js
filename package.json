@@ -5,6 +5,11 @@
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "eslint": "eslint .",
     "prettier": "prettier -c .",
@@ -12,7 +17,9 @@
     "types": "tsc -p jsconfig.json",
     "mocha": "mocha",
     "test": "npm run eslint && npm run prettier && npm run types && npm run mocha",
-    "prepublishOnly": "npm test"
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "engines": {
     "node": ">= 16",
@@ -42,18 +49,13 @@
   ],
   "author": "pur3miish",
   "license": "MIT",
-  "files": ["ripemd160.js", "ripemd160.d.ts"],
   "sideEffects": false,
-  "exports": {
-    "./ripemd160.js": "./ripemd160.js",
-    "./package.json": "./package.json"
-  },
   "devDependencies": {
     "@types/node": "^18.13.0",
     "eslint": "^8.34.0",
     "eslint-plugin-mocha": "^10.5.0",
+    "mocha": "^11.0.1",
     "prettier": "^2.8.4",
-    "typescript": "^4.9.5",
-    "mocha": "^11.0.1"
+    "typescript": "^7.0.2"
   }
 }
