@@ -1,16 +1,20 @@
 import { deepStrictEqual, ok } from "assert";
 import crypto from "crypto";
 
-import ripemd160 from "../index.js";
+import { ripemd160 } from "../dist/index.js";
 
 it("Ripemd160 message input.", async function () {
-  const hash = await ripemd160("the quick brown fox jumps over the lazy dog");
-  const native_hash = crypto
-    .createHash("ripemd160")
-    .update("the quick brown fox jumps over the lazy dog")
-    .digest()
-    .toString("hex");
-  ok(native_hash == hash, "Expected string output");
+  const msg = "the quick brown fox jumps over the lazy dog";
+
+  const hash = await ripemd160(new TextEncoder().encode(msg));
+  const native_hash = Uint8Array.from(
+    crypto
+      .createHash("ripemd160")
+      .update("the quick brown fox jumps over the lazy dog")
+      .digest(),
+  );
+
+  deepStrictEqual(native_hash, hash, "Expected Uint8Array output");
 });
 
 it("Ripemd160 message Uint8Array.", async function () {
@@ -19,7 +23,7 @@ it("Ripemd160 message Uint8Array.", async function () {
     crypto
       .createHash("ripemd160")
       .update(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
-      .digest()
+      .digest(),
   );
   deepStrictEqual(native_hash, hash, "Expected Uint8Array output");
 });
@@ -31,7 +35,7 @@ it("Ripemd160 size limit.", async function () {
     crypto
       .createHash("ripemd160")
       .update(new Uint8Array(random_buffer))
-      .digest()
+      .digest(),
   );
   deepStrictEqual(native_node_hash, hash, "random bytes");
 });
@@ -58,7 +62,7 @@ it("message length > 65536,", async function () {
 
   const compare = async (bytes) => {
     const native_hash = new Uint8Array(
-      crypto.createHash("ripemd160").update(bytes).digest()
+      crypto.createHash("ripemd160").update(bytes).digest(),
     );
     const hash = await ripemd160(bytes);
     deepStrictEqual(hash, native_hash);

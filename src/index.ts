@@ -1,6 +1,11 @@
-"use strict";
-
 export function ripemd160(input: Uint8Array): Uint8Array {
+  if (!(input instanceof Uint8Array)) {
+    throw new TypeError("ripemd160 input must be a Uint8Array");
+  }
+
+  if (input.length > 65536)
+    throw new RangeError("Message must be less than 65,536 characters.");
+
   const zl: readonly number[] = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7, 4, 13, 1, 10, 6,
     15, 3, 12, 0, 9, 5, 2, 14, 11, 8, 3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13,
@@ -60,7 +65,7 @@ export function ripemd160(input: Uint8Array): Uint8Array {
     e: number,
     m: number,
     k: number,
-    s: number
+    s: number,
   ): number => (rotl((a + f(b, c, d) + m + k) | 0, s) + e) | 0;
 
   // Padding
