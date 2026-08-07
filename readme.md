@@ -8,7 +8,7 @@ A tiny, dependency-free, isomorphic **RIPEMD-160** implementation for modern Jav
 
 Designed as a minimal cryptographic primitive:
 
-- **≈4 KB package footprint (gzip & minify)**
+- **≈2 KB package footprint (gzip & minify)**
 - **Zero runtime dependencies**
 - **Native ESM**
 - **Node.js and browser compatible**
