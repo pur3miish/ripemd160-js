@@ -2,10 +2,15 @@ import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import mochaPlugin from "eslint-plugin-mocha";
+import tseslint from "typescript-eslint";
 
 export default defineConfig([
   {
     ignores: ["dist/**", "node_modules/**"],
+  },
+  {
+    files: ["src/**/*.ts"],
+    extends: [tseslint.configs.recommended],
   },
   {
     files: ["**/*.{js,mjs,cjs}"],
