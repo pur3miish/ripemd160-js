@@ -1,98 +1,211 @@
-# ripemd160-js changelog
+# Changelog
 
-# 3.0.3
+All notable changes to `ripemd160-js` are documented in this file.
 
-## Patch
+## 4.0.0 - 2026-08-07
 
-- added .ts declaration file.
-- Fixed exports issue.
+### Major
 
-## Patch
+This release substantially simplifies `ripemd160-js`, replacing the previous implementation with a minimal TypeScript implementation focused on a single RIPEMD-160 primitive.
 
-- Mocha testing
+### Breaking Changes
 
-# 3.0.1
+- The public API is now byte-oriented:
 
-## Patch
+  ```ts
+  ripemd160(input: Uint8Array): Uint8Array
+  ```
 
-- Added fix to the missing index.d.ts file from exports.
+- String inputs are no longer implicitly encoded.
 
-# 3.0.0
+- Hex strings are no longer returned automatically for string inputs.
 
-## Major
+- The function is now synchronous.
 
-- TypeScript declaration files (.d.ts) have been added for all public modules.
-- Support for node >=14.0.0 & npm >=7.0.0.
-- Imports now favours dropping the file extension.
-- Refined exports Field: Simplified the module exports by removing the .mjs and .js extensions from the paths. Now, users can import modules without needing to specify the file extension.
+- The previous Promise-based API has been removed.
 
-# 2.0.3
+- The previous default export has been replaced with a named export:
 
-## Patch
+  ```js
+  import { ripemd160 } from "ripemd160-js";
+  ```
 
-- Redme updates
+- CommonJS `require()` support is no longer provided.
 
-# 2.0.2
+- The package is now distributed as native ESM only.
 
-## Patch
+### Added
 
-- Removed JSON file for better support for universal cross platform (deno, nodejs and browser support).
+- Native TypeScript source.
+- Automatically generated TypeScript declaration files.
+- Explicit `Uint8Array` input and `Uint8Array` output.
+- Runtime validation for invalid input types.
+- Native package-level ESM exports.
+- Direct package import support:
 
-# 2.0.1
+  ```js
+  import { ripemd160 } from "ripemd160-js";
+  ```
 
-## Patch
+### Changed
 
-- Bug fix for import structure.
+- Replaced the previous WebAssembly-based implementation with a standalone JavaScript RIPEMD-160 implementation.
+- Reduced the published package footprint from approximately **7 KB to approximately 2 KB**.
+- Simplified the public API to expose the underlying RIPEMD-160 byte primitive directly.
+- Text encoding is now explicitly controlled by the caller using APIs such as `TextEncoder`.
+- Digest encoding, including hexadecimal output, is now explicitly controlled by the caller.
+- Source code is compiled from `src/index.ts` into the published `dist` directory.
+- Only compiled distribution files are included in the npm package.
+- Modernized the TypeScript build configuration.
+- Modernized ESLint configuration to use ESLint flat config.
+- Updated ESLint, eslint-plugin-mocha, Prettier, TypeScript, and other development tooling.
+- Updated the minimum supported Node.js version to Node.js 22.
 
-# 2.0.0
+### Removed
 
-## Major
+- WebAssembly runtime implementation.
+- WebAssembly binary payload.
+- Implicit string conversion.
+- Promise-based hashing API.
+- Default export.
+- CommonJS output.
+- Node.js `Buffer` dependency from the runtime implementation.
+- Platform-specific crypto dependencies.
+- Legacy JavaScript project configuration.
+- Hand-maintained TypeScript declaration files.
 
-- This package is now an ESM module
-- Support for Deno
+### Package Characteristics
 
-## Patch
+- Zero runtime dependencies.
+- Approximately 2 KB published package footprint.
+- Native ESM.
+- TypeScript declarations included.
+- Browser compatible.
+- Node.js compatible.
+- Isomorphic implementation.
+- No `Buffer` requirement.
+- No WebAssembly runtime requirement.
+- No Node.js `crypto` dependency.
 
-- dev eslint packages changes
+---
 
-# 1.2.0
+## 3.0.3
 
-## Minor
+### Fixed
 
-- Imports are now working.
+- Added the missing TypeScript declaration file.
+- Fixed package exports.
 
-## Patch
+### Changed
 
-- Depen updated.
-- Removed dev dependencies.
+- Improved Mocha test coverage.
 
-# 1.1.1
+---
 
-## Patch
+## 3.0.1
 
-- readme.md updates.
+### Fixed
 
-# 1.1.0
+- Fixed the missing `index.d.ts` file referenced by package exports.
 
-### Minor
+---
 
-- Hash function can now handle arrays & strings of up to 65,536.
+## 3.0.0
 
-### Patch
+### Major
 
-- Added github workflow configuration and badge to readme.md..
-- Added npm version badge to readme.md.
+- Added TypeScript declaration files (`.d.ts`) for public modules.
+- Added support for Node.js 14 and newer.
+- Added support for npm 7 and newer.
+- Simplified package imports.
+- Refined the package `exports` field so consumers no longer needed to specify implementation-specific `.mjs` or `.js` paths.
+
+---
+
+## 2.0.3
+
+### Changed
+
+- Updated README documentation.
+
+---
+
+## 2.0.2
+
+### Changed
+
+- Removed the JSON binary file to improve portability across Deno, Node.js, and browser environments.
+
+---
+
+## 2.0.1
+
+### Fixed
+
+- Fixed package import structure.
+
+---
+
+## 2.0.0
+
+### Major
+
+- Migrated the package to ECMAScript modules.
+- Added Deno support.
+
+### Changed
+
+- Updated ESLint development dependencies and configuration.
+
+---
+
+## 1.2.0
+
+### Added
+
+- Improved package import support.
+
+### Changed
+
+- Updated development dependencies.
+- Removed unnecessary development dependencies.
+
+---
+
+## 1.1.1
+
+### Changed
+
+- Updated README documentation.
+
+---
+
+## 1.1.0
+
+### Added
+
+- Added support for hashing arrays and strings up to 65,536 bytes.
+- Added GitHub Actions workflow configuration.
+- Added CI and npm version badges to the README.
+
+---
 
 ## 1.0.1
 
-### Patch
+### Fixed
 
-- typo fix in readme.md.
+- Corrected README documentation typos.
+
+---
 
 ## 1.0.0
 
-- Reduction in JSON binary file size by using clang flag -Oz.
+### Changed
+
+- Reduced the embedded binary size using the Clang `-Oz` optimization flag.
+
+---
 
 ## 1.0.0-rc
 
-Initial Release.
+Initial release.

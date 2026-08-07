@@ -1,59 +1,66 @@
 {
   "name": "ripemd160-js",
   "version": "4.0.0",
-  "description": "An universal JavaScript ripemd160 message digest function.",
+  "description": "A tiny, zero-dependency RIPEMD-160 implementation for JavaScript and TypeScript.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "eslint": "eslint .",
     "prettier": "prettier -c .",
-    "prettier:readme": "prettier --write readme.md",
-    "types": "tsc -p jsconfig.json",
+    "prettier:fix": "prettier --write .",
     "mocha": "mocha",
-    "test": "npm run eslint && npm run prettier && npm run types && npm run mocha",
-    "prepublishOnly": "npm test"
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run eslint && npm run prettier && npm run build && npm run mocha",
+    "prepack": "npm run clean && npm run build",
+    "prepublishOnly": "npm run smoke",
+    "smoke": "npm test && node scripts/smoke-test.mjs"
   },
   "engines": {
-    "node": ">= 16",
-    "npm": ">=7.0.0"
+    "node": ">=22"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pur3miish/ripemd160-js.git"
   },
   "keywords": [
     "ripemd160",
-    "web",
-    "assembly",
-    "wasm",
+    "ripemd-160",
+    "hash",
+    "cryptography",
+    "crypto",
     "javascript",
-    "blockchain",
-    "asymmetric",
-    "key",
-    "utility",
-    "constant",
-    "time"
+    "typescript",
+    "esm",
+    "browser",
+    "node",
+    "isomorphic",
+    "blockchain"
   ],
   "author": "pur3miish",
   "license": "MIT",
-  "files": ["ripemd160.js", "ripemd160.d.ts"],
   "sideEffects": false,
-  "exports": {
-    "./ripemd160.js": "./ripemd160.js",
-    "./package.json": "./package.json"
-  },
   "devDependencies": {
-    "@types/node": "^18.13.0",
-    "eslint": "^8.34.0",
-    "eslint-plugin-mocha": "^10.5.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5",
-    "mocha": "^11.0.1"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "eslint-plugin-mocha": "^12.0.2",
+    "globals": "^17.9.0",
+    "mocha": "^11.0.1",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.66.0"
   }
 }
