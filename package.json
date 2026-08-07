@@ -1,7 +1,7 @@
 {
   "name": "ripemd160-js",
   "version": "4.0.0",
-  "description": "An universal JavaScript ripemd160 message digest function.",
+  "description": "A tiny, zero-dependency RIPEMD-160 implementation for JavaScript and TypeScript.",
   "bugs": "https://github.com/pur3miish/ripemd160-js/issues",
   "homepage": "https://github.com/pur3miish/ripemd160-js#readme",
   "type": "module",
@@ -10,27 +10,28 @@
   "files": [
     "dist"
   ],
-
-"scripts": {
-  "eslint": "eslint .",
-  "prettier": "prettier -c .",
-  "prettier:fix": "prettier --write .",
-  "mocha": "mocha",
-  "clean": "rm -rf dist",
-  "build": "tsc -p tsconfig.json",
-  "test": "npm run eslint && npm run prettier && npm run build && npm run mocha",
-  "prepublishOnly": "npm run clean && npm test"
-},
+  "scripts": {
+    "eslint": "eslint .",
+    "prettier": "prettier -c .",
+    "prettier:fix": "prettier --write .",
+    "mocha": "mocha",
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run eslint && npm run prettier && npm run build && npm run mocha",
+    "prepack": "npm run clean && npm run build",
+    "prepublishOnly": "npm run smoke",
+    "smoke": "npm test && node scripts/smoke-test.mjs"
+  },
   "engines": {
     "node": ">=22"
   },
-"exports": {
-  ".": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "default": "./dist/index.js"
-  }
-},
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "browserslist": [
     "defaults",
     "not IE 11",
@@ -42,16 +43,17 @@
   },
   "keywords": [
     "ripemd160",
-    "web",
-    "assembly",
-    "wasm",
+    "ripemd-160",
+    "hash",
+    "cryptography",
+    "crypto",
     "javascript",
-    "blockchain",
-    "asymmetric",
-    "key",
-    "utility",
-    "constant",
-    "time"
+    "typescript",
+    "esm",
+    "browser",
+    "node",
+    "isomorphic",
+    "blockchain"
   ],
   "author": "pur3miish",
   "license": "MIT",

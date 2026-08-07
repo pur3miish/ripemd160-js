@@ -2,7 +2,7 @@
 
 # ripemd160-js
 
-[![npm](https://img.shields.io/npm/v/ripemd160-js.svg?style=flat-square)](https://www.npmjs.com/package/ripemd160-js) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE) ![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg?style=flat-square) ![Package Size](https://img.shields.io/badge/package-%E2%89%884%20KB-brightgreen.svg?style=flat-square) ![ESM](https://img.shields.io/badge/module-native%20ESM-blue.svg?style=flat-square) ![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg?style=flat-square) ![Node](https://img.shields.io/badge/Node.js-%E2%89%A522-339933.svg?style=flat-square&logo=node.js&logoColor=white) ![Browser](https://img.shields.io/badge/browser-native-orange.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/ripemd160-js.svg?style=flat-square)](https://www.npmjs.com/package/ripemd160-js) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE) ![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg?style=flat-square) ![ESM](https://img.shields.io/badge/module-native%20ESM-blue.svg?style=flat-square) ![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg?style=flat-square) ![Node](https://img.shields.io/badge/Node.js-%E2%89%A522-339933.svg?style=flat-square&logo=node.js&logoColor=white) ![Browser](https://img.shields.io/badge/browser-native-orange.svg?style=flat-square) ![Package Size](https://img.shields.io/badge/package-%E2%89%882%20KB-brightgreen.svg?style=flat-square)
 
 A tiny, dependency-free, isomorphic **RIPEMD-160** implementation for modern JavaScript and TypeScript.
 
@@ -200,19 +200,6 @@ For hex or other output formats, encode the returned digest according to the req
 ```text
 RIPEMD-160
 ```
-
-The implementation does not include:
-
-- dependency trees
-- stream abstractions
-- `Buffer` compatibility layers
-- string encoding helpers
-- hex encoding helpers
-- WebAssembly loaders
-- Node.js crypto wrappers
-- environment detection
-
-This keeps the package at approximately **4 KB**, down from approximately **7 KB** in the previous implementation.
 
 ---
 

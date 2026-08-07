@@ -50,7 +50,7 @@ This release substantially simplifies `ripemd160-js`, replacing the previous imp
 ### Changed
 
 - Replaced the previous WebAssembly-based implementation with a standalone JavaScript RIPEMD-160 implementation.
-- Reduced the published package footprint from approximately **7 KB to approximately 4 KB**.
+- Reduced the published package footprint from approximately **7 KB to approximately 2 KB**.
 - Simplified the public API to expose the underlying RIPEMD-160 byte primitive directly.
 - Text encoding is now explicitly controlled by the caller using APIs such as `TextEncoder`.
 - Digest encoding, including hexadecimal output, is now explicitly controlled by the caller.
@@ -77,7 +77,7 @@ This release substantially simplifies `ripemd160-js`, replacing the previous imp
 ### Package Characteristics
 
 - Zero runtime dependencies.
-- Approximately 4 KB published package footprint.
+- Approximately 2 KB published package footprint.
 - Native ESM.
 - TypeScript declarations included.
 - Browser compatible.
